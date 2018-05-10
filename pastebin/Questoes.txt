@@ -1,0 +1,30 @@
+3.
+(a) A filosofia de desenvolvimento "Mobile First" é o desenvolvimento da aplicação web primeiramente voltada para os dispositivos móveis e só depois para telas maiores. O HTML e o Javascript são impactados na navegação do site, já o CSS, é impactado na utilização das media-queries, modificando os estilos para os diversos tamanhos de tela.
+
+(b) Não, pois as regras de estilo do footer estão aplicadas primeiramente para telas maiores que 500px, depois disso ele está sendo escondido nas telas menores, ou seja, mobiles. Logo, a aplicação web foi desenvolvida primeiramente para desktops. Para solucionar essa questão, primeiramente os estilos deveriam ser definidos para telas menores e depois utilizando as media queries para definir o tamanho das telas maiores.
+
+4. 
+(a) O problema n+1 ocorre quando uma consulta no banco busca uma informação que está contida em mais de uma tabela, realizando várias queries para obter essas informações. No django acaba realizando várias queries para buscar uma informação no banco de dados, geralmente ocorre quando tentamos buscar uma informação que une duas tabelas ou mais. Existem meios para resolver isso, no django, é necessário usar a função select_related que realiza uma única query que une todos os models relacionados. Já em SQL, uma maneira que corrigir isto, seria utilizar a função INNER JOIN.
+
+(b)
+Ele apareceria com: paste = Paste.objects.all() => Nesta seriam realizadas várias consultas para cada dono do Paste.
+Para solucionar: paste = Paste.objects.select_related('user').all()
+
+5. 
+function Person(name, age){
+           this.name = name;
+           this.age = age;
+
+            function is_adult(Person){
+                   person = Object.Person;
+                   age = person.getAge();
+                   if(age >= 18){
+                        return true
+                   } else 
+                          false
+         }
+}
+
+
+
+

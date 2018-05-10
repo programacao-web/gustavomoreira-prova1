@@ -2,17 +2,27 @@
 
 {% block header %}
   <header>
-    <h1 class="paste-header">{{ title }}</h1>
+    <h1 class="paste-header">Prova 1 Gustavo Moreira</h1>
   </header>
 {% endblock %}
 
 {% block main %}
+
   <main class="paste-form">
-    <h2>Questao 1</h2>
-    <p>Deve mostrar um formulário em que o usuário pode criar um novo 
-    paste.</p>
-    <p>Cada paste deve conter um título, uma linguagem e o conteúdo.</p>
-    <p>Linguagens reconhecidas: Python, Javascript e Outros</p>
-    <p>Existem questões ocultas! Procure no código</p>
+   {% block form %}
+    <form method="post">
+      <input type="hidden" name="csrfmiddlewaretoken" value="{{csrf_token}}">
+      Titulo:<br>
+      <input type="text" name="titulo"><br>
+      linguagens:
+      <br>
+      <input type="checkbox" name="linguagem" value="Python"> Python<br>
+      <input type="checkbox" name="linguagem" value="Javascript"> Javascript<br>
+      <input type="checkbox" name="linguagem" value="Outros"> Outros<br>
+      Conteúdo:<br>
+      <textarea name="conteudo"></textarea><br>
+      <button type="submit"> submit</button>
+    </form>
+  {% endblock %}
   </main>
 {% endblock %}

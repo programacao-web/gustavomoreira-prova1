@@ -9,11 +9,9 @@
 {% block main %}
   <main class="paste-detail">
     <h2>Questão 2</h2>
-    <p>Conteúdo do Paste.</p>
     <ul>
-      <li>50% - mostra conteúdo</li>
-      <li>70% - mostra como código formatado</li>
-      <li>100% - syntax highlight. (Dicas: pygments, prims.js)</li>
-    </ul>
+      <li>{{ paste.titulo }}</li>
+      <li>{{ paste.linguagem }}</li>
+      <li>{{ paste.conteudo }}</li>
   </main>
 {% endblock %}
